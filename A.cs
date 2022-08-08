@@ -15,10 +15,24 @@ namespace A
             stack.Push(i);
             break;
           case ']':
-            if (stack.Count == 0 || stack.Pop() != ']')
+            if (stack.Count == 0 || stack.Pop() != '[')
             {
               return false;
             }
             break;
-            
+          case ')':
+            if (stack.Count == 0 || stack.Pop() != '(')
+            {
+              return false;
+            }
+            break;
+          case '}':
+            if (stack.Count == 0 || stack.Pop() != '{')
+            {
+              return false;
+            }
+            break;
+        }
+      }
+      return stack.Count == 0;
 }
