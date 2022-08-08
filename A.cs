@@ -35,4 +35,5 @@ namespace A
         }
       }
       return stack.Count == 0;
+   }
 }
